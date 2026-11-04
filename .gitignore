@@ -57,3 +57,6 @@ next-env.d.ts
 npm-debug.log*
 .env*
 .vercel
+
+# Browser test screenshots
+.playwright-mcp/

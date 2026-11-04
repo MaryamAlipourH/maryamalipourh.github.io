@@ -27,19 +27,19 @@ export function PublicationCard({
   summary,
 }: Publication) {
   return (
-    <article className="group grid gap-4 sm:grid-cols-[10rem_1fr] sm:gap-6">
+    <article className="group grid grid-cols-[5.5rem_1fr] gap-4 sm:grid-cols-[10rem_1fr] sm:gap-6">
       {image ? (
-        <div className="relative aspect-[4/3] w-full max-w-64 overflow-hidden rounded-lg border border-border bg-subtle sm:max-w-none">
+        <div className="relative aspect-[4/3] w-full self-start overflow-hidden rounded-lg border border-border bg-subtle">
           <Image
             src={image}
             alt=""
             fill
-            sizes="(min-width: 640px) 160px, 256px"
-            className="object-cover transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.04]"
+            sizes="(min-width: 640px) 160px, 88px"
+            className="object-cover transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.04] dark:brightness-[.88]"
           />
         </div>
       ) : (
-        <div aria-hidden className="hidden sm:block" />
+        <div aria-hidden />
       )}
 
       <div>

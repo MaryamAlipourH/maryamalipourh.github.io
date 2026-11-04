@@ -7,9 +7,9 @@ export function Hero() {
     <section
       id="about"
       aria-label="About"
-      className="grid scroll-mt-20 items-center gap-8 pt-12 pb-4 sm:pt-16 md:grid-cols-[1fr_14rem] md:gap-12"
+      className="grid scroll-mt-20 gap-8 pt-12 pb-4 sm:pt-16 md:grid-cols-[1fr_14rem] md:items-start md:gap-12"
     >
-      <div className="motion-safe:animate-fade-up md:order-2">
+      <div className="motion-safe:animate-fade-up md:order-2 md:pt-2">
         <Image
           src={profile.photo}
           alt={`Portrait of ${profile.name}`}
