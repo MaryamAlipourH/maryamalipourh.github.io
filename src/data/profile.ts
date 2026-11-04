@@ -18,8 +18,7 @@ export type Social = {
 export const profile = {
   name: "Maryam AlipourHajiagha",
   shortName: "MA",
-  tagline:
-    "AI Researcher · Probabilistic deep learning, computer vision & climate",
+  tagline: "AI Researcher. Generative AI",
   photo: "/images/MaryamAlipour.jpg",
   socials: [
     { label: "Email", href: "mailto:maryamalipour9877@gmail.com", icon: "email" },

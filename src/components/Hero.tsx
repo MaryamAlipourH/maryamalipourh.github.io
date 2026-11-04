@@ -7,9 +7,10 @@ export function Hero() {
     <section
       id="about"
       aria-label="About"
-      className="grid scroll-mt-20 gap-8 pt-12 pb-4 sm:pt-16 md:grid-cols-[1fr_14rem] md:items-start md:gap-12"
+      className="scroll-mt-20 pt-12 pb-4 motion-safe:animate-fade-up sm:pt-16"
     >
-      <div className="motion-safe:animate-fade-up md:order-2 md:pt-2">
+      {/* Top row: name, tagline and links beside the photo */}
+      <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-center md:gap-12">
         <Image
           src={profile.photo}
           alt={`Portrait of ${profile.name}`}
@@ -17,17 +18,22 @@ export function Hero() {
           height={640}
           loading="eager"
           fetchPriority="high"
-          className="size-32 rounded-full object-cover shadow-sm ring-1 ring-border sm:size-40 md:size-56"
+          className="size-32 rounded-full object-cover shadow-sm ring-1 ring-border sm:size-40 md:order-2 md:size-48"
         />
+
+        <div className="md:order-1">
+          <h1 className="font-serif text-4xl font-medium tracking-tight sm:text-5xl">
+            {profile.name}
+          </h1>
+          <p className="mt-2 text-lg text-muted">{profile.tagline}</p>
+          <div className="mt-6">
+            <SocialLinks links={profile.socials} />
+          </div>
+        </div>
       </div>
 
-      <div className="motion-safe:animate-fade-up md:order-1">
-        <h1 className="font-serif text-4xl font-medium tracking-tight sm:text-5xl">
-          {profile.name}
-        </h1>
-        <p className="mt-2 text-muted">{profile.tagline}</p>
-
-        <div className="mt-6 space-y-4 text-fg/90">
+      {/* Bio: full width, justified on larger screens */}
+      <div className="mt-10 space-y-4 text-fg/90 sm:text-justify">
           <p>
             I recently graduated with a Master’s in Applied Mathematics from{" "}
             <a className="link" href="https://www.polymtl.ca/">
@@ -66,11 +72,6 @@ export function Hero() {
             across the full ML lifecycle, I am interested in advancing research on
             generative AI, multimodal learning, and trustworthy AI systems.
           </p>
-        </div>
-
-        <div className="mt-8">
-          <SocialLinks links={profile.socials} />
-        </div>
       </div>
     </section>
   );
