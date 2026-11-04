@@ -46,3 +46,17 @@ env/
 
 # Local server files
 *.log
+
+# Node / Next.js
+/node_modules
+/.next/
+/out/
+/build
+next-env.d.ts
+*.tsbuildinfo
+npm-debug.log*
+.env*
+.vercel
+
+# Browser test screenshots
+.playwright-mcp/
